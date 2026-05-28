@@ -46,4 +46,14 @@ class ArithServiceTest {
         assertEquals(1,sum);
     }
 
+    @Test
+    void add_two_positive_numbers_should_return_their_sum_of_division() {
+        var a = 2;
+        var b = 2;
+
+        var sum = arithService.divide(a,b);
+
+        assertEquals(1,sum);
+    }
+
 }
