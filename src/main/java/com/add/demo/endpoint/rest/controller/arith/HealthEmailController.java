@@ -1,6 +1,6 @@
-package com.add.demo.endpoint.rest.controller.health;
+package com.add.demo.endpoint.rest.controller.arith;
 
-import static com.add.demo.endpoint.rest.controller.health.PingController.OK;
+import static com.add.demo.endpoint.rest.controller.arith.PingController.OK;
 import static java.io.File.createTempFile;
 
 import com.add.demo.PojaGenerated;
