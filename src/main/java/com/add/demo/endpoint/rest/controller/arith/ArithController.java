@@ -22,9 +22,12 @@ public class ArithController {
 
     @GetMapping("/multiply")
     public int multiply(int a, int b) {
-        return  arithService.multiply(a,b);
+        return arithService.multiply(a,b);
     }
 
-
+    @GetMapping("/divide")
+    public int divide(int a, int b) {
+        return arithService.divide(a,b);
+    }
 
 }
