@@ -1,4 +1,4 @@
-package com.add.demo.endpoint.rest.controller.health;
+package com.add.demo.endpoint.rest.controller.arith;
 
 import com.add.demo.PojaGenerated;
 import lombok.AllArgsConstructor;
