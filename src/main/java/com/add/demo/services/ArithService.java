@@ -17,4 +17,13 @@ public class ArithService {
         }
         return a * b;
     }
+
+    public int soustract(int a, int b) {
+        if (a < 0 || b < 0) {
+            throw new IllegalArgumentException("a and b must be positive");
+        }
+        return a - b;
+    }
+
+
 }
