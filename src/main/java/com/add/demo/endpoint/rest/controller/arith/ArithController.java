@@ -15,8 +15,16 @@ public class ArithController {
         return arithService.add(a, b);
     }
 
+    @GetMapping("/soustract")
+    public int soustract(int a, int b) {
+        return arithService.soustract(a,b);
+    }
+
     @GetMapping("/multiply")
     public int multiply(int a, int b) {
         return  arithService.multiply(a,b);
     }
+
+
+
 }
