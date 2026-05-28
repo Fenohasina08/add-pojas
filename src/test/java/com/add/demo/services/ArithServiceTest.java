@@ -35,4 +35,15 @@ class ArithServiceTest {
 
         assertEquals(6,sum);
     }
+
+    @Test
+    void add_two_positive_numbers_should_return_their_sum_of_soustraction() {
+        var a = 2;
+        var b = 1;
+
+        var sum = arithService.soustract(a,b);
+
+        assertEquals(1,sum);
+    }
+
 }
