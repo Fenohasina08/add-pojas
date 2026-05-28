@@ -14,4 +14,9 @@ public class ArithController {
     public int add(int a, int b) {
         return arithService.add(a, b);
     }
+
+    @GetMapping("/multiply")
+    public int multiply(int a, int b) {
+        return  arithService.multiply(a,b);
+    }
 }
