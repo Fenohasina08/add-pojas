@@ -25,4 +25,14 @@ class ArithServiceTest {
 
         assertThrows(IllegalArgumentException.class, () -> arithService.add(a, b));
     }
+
+    @Test
+    void add_two_positive_numbers_should_return_their_sum_of_multiply() {
+        var a = 2;
+        var b = 3;
+
+        var sum = arithService.multiply(a,b);
+
+        assertEquals(6,sum);
+    }
 }
