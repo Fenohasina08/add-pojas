@@ -2,57 +2,40 @@ package com.add.demo.services;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class ArithServiceTest {
-  private final ArithService arithService = new ArithService();
 
-  @Test
-  void add_two_positive_numbers_should_return_their_sum() {
-    var a = 5;
-    var b = 10;
+    private ArithService arithService;
 
-    var sum = arithService.add(a, b);
+    @BeforeEach
+    void setUp() {
+        arithService = new ArithService();
+    }
 
-    assertEquals(15, sum);
-  }
+    @Test
+    void add_two_positive_numbers_should_return_their_sum() {
+        assertEquals(15, arithService.add(5, 10));
+    }
 
-  @Test
-  void add_negative_numbers_should_throw_exception() {
-    var a = -5;
-    var b = -10;
+    @Test
+    void add_negative_numbers_should_throw_exception() {
+        assertThrows(IllegalArgumentException.class, () -> arithService.add(-5, -10));
+    }
 
-    assertThrows(IllegalArgumentException.class, () -> arithService.add(a, b));
-  }
+    @Test
+    void multiply_should_return_product() {
+        assertEquals(6, arithService.multiply(2, 3));
+    }
 
-  @Test
-  void add_two_positive_numbers_should_return_their_sum_of_multiply() {
-    var a = 2;
-    var b = 3;
+    @Test
+    void soustract_should_return_difference() {
+        assertEquals(1, arithService.soustract(2, 1));
+    }
 
-    var sum = arithService.multiply(a, b);
-
-    assertEquals(6, sum);
-  }
-
-  @Test
-  void add_two_positive_numbers_should_return_their_sum_of_soustraction() {
-    var a = 2;
-    var b = 1;
-
-    var sum = arithService.soustract(a, b);
-
-    assertEquals(1, sum);
-  }
-
-  @Test
-  void add_two_positive_numbers_should_return_their_sum_of_division() {
-    var a = 2;
-    var b = 2;
-
-    var sum = arithService.divide(a, b);
-
-    assertEquals(1, sum);
-  }
+    @Test
+    void divide_should_return_quotient() {
+        assertEquals(1, arithService.divide(2, 2));
+    }
 }
